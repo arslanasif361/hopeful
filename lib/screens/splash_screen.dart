@@ -56,7 +56,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Container(
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('images/Kraft background.png'),
+                      image: AssetImage('images/Kraft_background.png'),
                       fit: BoxFit.fill)),
               child: AnimatedOpacity(
                 opacity: _visible ? 1.0 : 0.0,
@@ -72,7 +72,7 @@ class _SplashScreenState extends State<SplashScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Image.asset(
-                                'images/Leaves Black.png',
+                                'images/blackLeaves.png',
                                 height: 100,
                                 width: 100,
                               ),
