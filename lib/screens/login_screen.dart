@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hopeful/constants.dart';
 import 'package:hopeful/screens/scan_screen.dart';
 import 'package:hopeful/Components/textfield_with_label.dart';
 import 'package:hopeful/Components/button_with_label.dart';
@@ -12,7 +13,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0XFFbd956c),
+      backgroundColor: kMainColor,
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
