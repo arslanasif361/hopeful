@@ -23,94 +23,110 @@ class _LoginState extends State<Login> {
             image: DecorationImage(
                 image: AssetImage('images/Kraft_background.png'),
                 fit: BoxFit.cover)),
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 35),
-            child: ListView(
-              children: [
-                Center(
-                  child: Text(
-                    "Welcome to your Hopeful app!",
-                    style: TextStyle(
-                        fontFamily: 'Nexa',
-                        letterSpacing: 0.5,
-                        color: Colors.black,
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.w900),
-                  ),
-                ),
-                SizedBox(
-                  height: 55,
-                ),
-                Container(
-                  height: MediaQuery.of(context).size.height / 2,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.black,
-                      width: 7.0,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 100, left: 35, right: 35.0, bottom: 45),
+                child: ListView(
+                  shrinkWrap: true,
+                  children: [
+                    Center(
+                      child: Text(
+                        "Welcome to your Hopeful app!",
+                        style: TextStyle(
+                            fontFamily: 'Nexa',
+                            letterSpacing: 0.5,
+                            color: Colors.black,
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w900),
+                      ),
                     ),
-                    borderRadius: BorderRadius.all(Radius.circular(50)),
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(top: 35.0),
-                        child: SimpleTextField(
-                          hintText: 'First Name',
-                          horizontalPadding: 50.0,
+                    SizedBox(
+                      height: 55,
+                    ),
+                    Container(
+                      height: MediaQuery.of(context).size.height / 2,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 7.0,
                         ),
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
                       ),
-                      SimpleTextField(
-                        hintText: 'Email Address',
-                        horizontalPadding: 50.0,
-                      ),
-                      SimpleTextField(
-                        hintText: 'Conifirm Email Address',
-                        horizontalPadding: 50.0,
-                      ),
-                      SizedBox(
-                        height: 30.0,
-                      ),
-                      Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            GestureDetector(
-                                onTap: () {
-                                  setState(() {
-                                    isChecked = !isChecked;
-                                  });
-                                },
-                                child: Image(
-                                  image: isChecked
-                                      ? AssetImage('images/empty_checkbox.png')
-                                      : AssetImage(
-                                          'images/checked_checkbox.png'),
-                                  height: 50.0,
-                                  width: 50.0,
-                                )),
-                            Text(
-                              'Grant camera access to \n scan my bamboolian logo',
-                              style: TextStyle(
-                                  letterSpacing: 0.5,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w900),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 35.0),
+                            child: SimpleTextField(
+                              hintText: 'First Name',
+                              horizontalPadding: 50.0,
                             ),
-                          ],
-                        ),
+                          ),
+                          SimpleTextField(
+                            hintText: 'Email Address',
+                            horizontalPadding: 50.0,
+                          ),
+                          SimpleTextField(
+                            hintText: 'Conifirm Email Address',
+                            horizontalPadding: 50.0,
+                          ),
+                          SizedBox(
+                            height: 30.0,
+                          ),
+                          Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                GestureDetector(
+                                    onTap: () {
+                                      setState(() {
+                                        isChecked = !isChecked;
+                                      });
+                                    },
+                                    child: Image(
+                                      image: isChecked
+                                          ? AssetImage(
+                                              'images/empty_checkbox.png')
+                                          : AssetImage(
+                                              'images/checked_checkbox.png'),
+                                      height: 50.0,
+                                      width: 50.0,
+                                    )),
+                                Text(
+                                  'Grant camera access to \n scan my bamboolian logo',
+                                  style: TextStyle(
+                                      letterSpacing: 0.5,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w900),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 50.0,
+                          ),
+                          ButtonWithLabel(
+                            label: 'Save and continue',
+                          ),
+                        ],
                       ),
-                      SizedBox(
-                        height: 50.0,
-                      ),
-                      ButtonWithLabel(
-                        label: 'Save and continue',
-                      ),
-                    ],
-                  ),
-                )
-              ],
+                    )
+                  ],
+                ),
+              ),
             ),
-          ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 40.0),
+              child: Image.asset(
+                'images/Powered_by_bamboolian.png',
+                height: 70,
+                width: 140,
+              ),
+            ),
+          ],
         ),
       ),
     );
