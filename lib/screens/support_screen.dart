@@ -22,15 +22,14 @@ class SupportScreen extends StatelessWidget {
                 child: TextfieldWithLabel(
                   horizontalPadding: 45.0,
                   label: 'SUBJECT',
-                  hintText: 'Enter Subject',
+                  hintText: 'i.e. product support',
+
                 ),
               ),
-              Container(
-                  child: TextfieldWithLabel(
-                horizontalPadding: 45.0,
-                label: 'EMAIL ADDRESS',
-                hintText: 'Enter your Email address',
-              )),
+              SizedBox(
+                height: 25,
+              ),
+
               Container(
                   child: Column(
                 children: [
@@ -38,17 +37,24 @@ class SupportScreen extends StatelessWidget {
                     horizontalPadding: 45.0,
                     label: 'YOUR MESSAGE',
                     hintText: 'Please Enter your message here',
-                    maxLines: 12,
+                    maxLines: 20,
                   ),
-                  Text(
-                    'Double check your email',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                    Image.asset("images/icons/Attachement.png",height: 40,width: 40,),
+                    SizedBox(width: 5,),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 60),
+                      child: Text("Click here to attach a file",style: TextStyle(color: Colors.black,fontWeight: FontWeight.w900,fontSize: 16,wordSpacing: 2,letterSpacing: 0.5),),
+                    ),
+                  ],)
+                  // ListTile(leading: Image.asset("images/icons/Attachement.png",height: 40,width: 40,),title: Text("Click here to attach a file",style: TextStyle(color: Colors.black,fontWeight: FontWeight.w900),),),
                 ],
               )),
               Padding(
                 padding: EdgeInsets.only(
-                    top: 30, bottom: 50.0, left: 100, right: 100.0),
+                    top: 80, bottom: 50.0, left: 110, right: 110.0),
                 child: ButtonWithLabel(
                   label: 'Submit Request',
                   onPress: () {

@@ -14,47 +14,41 @@ class SubmissionScreen extends StatelessWidget {
                 image: AssetImage('images/Kraft_background.png'),
                 fit: BoxFit.cover)),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'THANK YOU!',
               style: TextStyle(
-                  fontSize: 22.0,
+                //fontFamily: "Nexa Bold",
+                  fontSize: 24.0,
                   fontWeight: FontWeight.w900,
                   letterSpacing: 0.5),
             ),
+            SizedBox(height: 6,),
             Container(
               child: Column(
                 children: [
-                  Icon(
-                    Icons.check_box_outlined,
-                    size: 50.0,
-                  ),
-                  SizedBox(
-                    height: 15.0,
-                  ),
-                  Text(
-                    'Your request has been submitted',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 0.5,
-                        fontSize: 14),
-                  )
+                  Text("Your request has been submitted.",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                  SizedBox(height: 4,),
+                  Text("Make sure to check your email inbox",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                  SizedBox(height: 4,),
+                  Text("or spam folder in 24 hours.",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
                 ],
               ),
             ),
+            SizedBox(height: 100,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ButtonWithLabel(
-                  label: 'Back to Scanner',
+                  label: 'Scan Mode',
                   onPress: () {
                     Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) => ScanScreen()));
                   },
                 ),
                 SizedBox(
-                  width: 15.0,
+                  width: 20.0,
                 ),
                 ButtonWithLabel(
                   label: 'Exit',

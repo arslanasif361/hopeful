@@ -20,10 +20,12 @@ class TextfieldWithLabel extends StatelessWidget {
           padding: EdgeInsets.symmetric(
               horizontal: horizontalPadding, vertical: 8.0),
           child: TextField(
+            style: TextStyle(color: Colors.black,),
             maxLines: maxLines,
             decoration: InputDecoration(
               hintText: '$hintText',
               hintStyle: TextStyle(fontSize: 16),
+
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.black, width: 3.0),
                 borderRadius: BorderRadius.circular(8),
