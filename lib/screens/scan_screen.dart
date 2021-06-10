@@ -3,6 +3,11 @@ import 'package:hopeful/screens/purpose_Screen.dart';
 import 'package:hopeful/screens/support_screen.dart';
 import 'package:hopeful/screens/quote_screen.dart';
 
+import '../constants.dart';
+import '../constants.dart';
+import '../constants.dart';
+import '../constants.dart';
+
 class ScanScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -31,35 +36,22 @@ class ScanScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              'Good Morning ',
+                              'Good morning Sam! ',
                               style: TextStyle(
-                                  color: Color(0XFFbd956c), fontSize: 20.0),
-                            ),
-                            Text(
-                              'Sam!',
-                              style: TextStyle(
-                                  color: Color(0XFFbd956c),
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold),
+                                  color: kMainColor, fontSize: 23.0,fontWeight: FontWeight.w600,
+                                  fontFamily: "Nexa",
+                              ),
                             ),
                           ],
                         ),
                         SizedBox(
                           height: 5.0,
                         ),
-                        Text(
-                          'Scan the logo to uncover your',
-                          style: TextStyle(
-                              color: Color(0XFFbd956c), fontSize: 20.0),
-                        ),
+
                         SizedBox(
                           height: 5.0,
                         ),
-                        Text(
-                          'hopeful thought for today',
-                          style: TextStyle(
-                              color: Color(0XFFbd956c), fontSize: 20.0),
-                        ),
+
                       ],
                     ),
                   ),
@@ -79,7 +71,8 @@ class ScanScreen extends StatelessWidget {
                         child: Text(
                           'Camera will open up here\n click here to go to quote page',
                           style: TextStyle(
-                              color: Color(0XFFbd956c), fontSize: 20.0),
+                              color: kMainColor, fontSize: 20.0,
+                          fontWeight: FontWeight.w600),
                         ),
                       ),
                     ),
@@ -100,20 +93,19 @@ class ScanScreen extends StatelessWidget {
                                 MaterialPageRoute(
                                     builder: (context) => SupportScreen()));
                           },
-                          child: Icon(
-                            Icons.support_agent_outlined,
-                            color: Color(0XFFbd956c),
-                            size: 50.0,
-                          ),
+                          child:Image.asset("images/icons/Support.png",
+                          height: 50,
+                          width: 50,)
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        // SizedBox(
+                        //   height: 2.0,
+                        // ),
                         Text(
-                          'support',
+                          'Support',
                           style: TextStyle(
                             fontSize: 18.0,
-                            color: Color(0XFFbd956c),
+                            color: kMainColor,
+                            fontWeight: FontWeight.w600
                           ),
                         )
                       ],
@@ -131,20 +123,17 @@ class ScanScreen extends StatelessWidget {
                                 MaterialPageRoute(
                                     builder: (context) => PurposeScreen()));
                           },
-                          child: Icon(
-                            Icons.info_outlined,
-                            color: Color(0XFFbd956c),
-                            size: 50.0,
-                          ),
+                          child: Image.asset("images/icons/Leaves Brown.png",height: 50,width: 50,)
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        // SizedBox(
+                        //   height: 8.0,
+                        // ),
                         Text(
-                          'purpose',
+                          '129,392',
                           style: TextStyle(
                             fontSize: 18.0,
-                            color: Color(0XFFbd956c),
+                            color: kMainColor,
+                              fontWeight: FontWeight.w600
                           ),
                         )
                       ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hopeful/constants.dart';
 
 class ButtonWithLabel extends StatelessWidget {
   final label;
@@ -19,8 +20,9 @@ class ButtonWithLabel extends StatelessWidget {
           child: Text(
             '$label',
             style: TextStyle(
+              fontSize: 16,
                 letterSpacing: 1.0,
-                color: Color(0XFFbd956c),
+                color: kMainColor,
                 fontWeight: FontWeight.w900),
           ),
         ),
